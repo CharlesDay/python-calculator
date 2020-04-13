@@ -17,7 +17,7 @@ def equals():
     global operator
     sum_up = str(eval(operator))
     text_input.set(sum_up)
-    operator = ""
+    operator = sum_up
 
 calculator = Tk()
 calculator.title("Calculator")
@@ -46,5 +46,6 @@ btn0 = Button(calculator, padx=32, pady=32, bd=8, fg="black", font=('arial', 20,
 clear_button = Button(calculator, padx=32, pady=32, bd=8, fg="black", font=('arial', 20, 'bold'), command=clear_display, text="C", bg="orange").grid(row=4, column=1)
 equals_button = Button(calculator, padx=32, pady=32, bd=8, fg="black", font=('arial', 20, 'bold'), command=equals, text="=", bg="orange").grid(row=4, column=2)
 divide = Button(calculator, padx=32, pady=32, bd=8, fg="black", font=('arial', 20, 'bold'), text="/", command=lambda:button_click('/'), bg="orange").grid(row=4, column=3)
+decimal = Button(calculator, pady=32, bd=8, fg="black", font=('arial', 20, 'bold'), text=".", command=lambda:button_click('.'), bg="orange").grid(row=5, column=0, columnspan=4, sticky=W+E)
 
 calculator.mainloop()
